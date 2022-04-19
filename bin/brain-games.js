@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-console.log('Welcome to the Brain Games!');
+import hello from '/Users/elizabethsolomyannik/frontend-project-lvl1/src/cli.js';
+
+hello();
