@@ -4,5 +4,4 @@
 ![example workflow](https://github.com/lizasolomyannik/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)
 
 #### Brain-Even
-[![asciicast](https://asciinema.org/a/87WLdHAu5QOGTVvweu2yDAQP5.svg)](https://asciinema.org/a/87WLdHAu5QOGTVvweu2yDAQP5)
-
+[![asciicast](https://asciinema.org/a/is0RfGQ6LIVxqHpro7dZoNN4O.svg)](https://asciinema.org/a/is0RfGQ6LIVxqHpro7dZoNN4O)
