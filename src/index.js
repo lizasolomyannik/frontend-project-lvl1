@@ -19,9 +19,23 @@ const randomExpression = () => {
   return chars[randomIndex];
 };
 
+const getName = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log('Hello, ' + name + '!');
+  return name;
+};
+
 const getAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
   return answer;
+};
+
+const check = (usr, def, name) => {
+  if (usr !== def) {
+    return '\'' + usr + '\' is wrong answer ;(. Correct answer was \'' + def + '\' \n Let\'s try again, ' + name + '!';
+  }
+  return 'Correct!';
 };
 
 const wrongAnswer = (usr, def, name) => {
@@ -29,6 +43,13 @@ const wrongAnswer = (usr, def, name) => {
   console.log('Let\'s try again, ' + name + '!');
 };
 
+const GCD = (a, b) => {
+  if (b > a) return GCD(b, a);
+  if (!b) return a;
+  if (a === b) return a;
+  return GCD(b, a % b);
+};
+
 export {
-  isEven, randomNumber, randomExpression, wrongAnswer, getAnswer,
+  isEven, randomNumber, randomExpression, wrongAnswer, getAnswer, GCD, check, getName,
 };
