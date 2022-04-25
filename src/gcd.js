@@ -8,11 +8,15 @@ const gcdGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const a = randomNumber();
     const b = randomNumber();
-    console.log('Question: ', a, b);
+    console.log('Question:', a, b);
     const def = GCD(a, b);
-    const usr = getAnswer();
-    check(usr, def, name);
+    const usr = Number(getAnswer());
+    console.log(check(usr, def, name));
+    if (check(usr, def, name) !== 'Correct!') {
+      return;
+    }
   }
+  console.log('Congratulations, ' + name + '!');
 };
 
 export default gcdGame;

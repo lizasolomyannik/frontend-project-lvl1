@@ -33,7 +33,7 @@ const getAnswer = () => {
 
 const check = (usr, def, name) => {
   if (usr !== def) {
-    return '\'' + usr + '\' is wrong answer ;(. Correct answer was \'' + def + '\' \n Let\'s try again, ' + name + '!';
+    return '\'' + usr + '\' is wrong answer ;(. Correct answer was \'' + def + '\'. \nLet\'s try again, ' + name + '!';
   }
   return 'Correct!';
 };
