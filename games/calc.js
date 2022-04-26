@@ -6,8 +6,11 @@ const calc = () => {
   const name = String(getName());
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
-    const expression = [randomNumber(), randomExpression(), randomNumber()];
-    console.log('Question: ', expression.join(' '));
+    const firstNumber = randomNumber();
+    const sign = randomExpression();
+    const secondNumber = randomNumber();
+    const expression = [firstNumber, sign, secondNumber];
+    console.log('Question:', firstNumber, sign, secondNumber);
     let def;
     const operation = expression[1];
     switch (operation) {
