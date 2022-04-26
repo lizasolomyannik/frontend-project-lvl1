@@ -12,6 +12,11 @@ const randomNumber = () => {
   return number;
 };
 
+const randomInteger = (max) => {
+  const int = Math.floor(Math.random() * max);
+  return int;
+};
+
 const randomExpression = () => {
   const chars = ['-', '+', '*', '/'];
   const len = chars.length;
@@ -50,6 +55,18 @@ const GCD = (a, b) => {
   return GCD(b, a % b);
 };
 
+const arithmeticProgression = (n) => {
+  const firstElement = randomNumber();
+  const step = randomInteger(n);
+  const progression = [firstElement];
+  for (let j = 1; j < 10; j += 1) {
+    const element = progression[j - 1] + step;
+    progression.push(element);
+  }
+  return progression;
+};
+
 export {
   isEven, randomNumber, randomExpression, wrongAnswer, getAnswer, GCD, check, getName,
+  randomInteger, arithmeticProgression,
 };
