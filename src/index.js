@@ -66,7 +66,22 @@ const arithmeticProgression = (n) => {
   return progression;
 };
 
+const isPrime = (n) => {
+  if (n === 2) {
+    return 'yes';
+  }
+  if (n > 1) {
+    for (let i = 2; i < n; i += 1) {
+      if (n % i !== 0) {
+        return 'yes';
+      }
+      return 'no';
+    }
+  }
+  return 'no';
+};
+
 export {
   isEven, randomNumber, randomExpression, wrongAnswer, getAnswer, GCD, check, getName,
-  randomInteger, arithmeticProgression,
+  randomInteger, arithmeticProgression, isPrime,
 };
