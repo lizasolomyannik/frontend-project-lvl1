@@ -69,7 +69,7 @@ const arithmeticProgression = (n) => {
 };
 
 const isPrime = (n) => {
-  if (n < 1) {
+  if (n < 2) {
     return 'no';
   }
   for (let i = 2; i < n; i += 1) {
