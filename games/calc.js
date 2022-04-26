@@ -1,5 +1,5 @@
 import {
-  randomNumber, randomExpression, check, getAnswer, getName,
+  randomNumber, randomExpression, check, getAnswer, getName, Congratulations,
 } from '../src/index.js';
 
 const calc = () => {
@@ -35,7 +35,7 @@ const calc = () => {
       return;
     }
   }
-  console.log('Congratulations, ' + name + '!');
+  console.log(Congratulations(name));
 };
 
 export default calc;

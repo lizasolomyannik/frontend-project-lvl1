@@ -11,7 +11,6 @@ parserOptions:
 
 rules:
   no-console: 0
-  prefer-template: 0
   no-unreachable-loop: 0
   import/extensions: 
     - error

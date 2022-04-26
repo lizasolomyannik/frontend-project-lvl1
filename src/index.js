@@ -7,6 +7,11 @@ const isEven = (n) => {
   return false;
 };
 
+const Congratulations = (name) => {
+  const message = ['Congratulations, ', name, '!'];
+  return message.join('');
+};
+
 const randomNumber = () => {
   const number = Math.round(Math.random() * 20);
   return number;
@@ -27,7 +32,8 @@ const randomExpression = () => {
 const getName = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
-  console.log('Hello, ' + name + '!');
+  const message = ['Hello, ', name, '!'];
+  console.log(message.join(''));
   return name;
 };
 
@@ -38,14 +44,10 @@ const getAnswer = () => {
 
 const check = (usr, def, name) => {
   if (usr !== def) {
-    return '\'' + usr + '\' is wrong answer ;(. Correct answer was \'' + def + '\'. \nLet\'s try again, ' + name + '!';
+    const message = ['\'', usr, '\' is wrong answer ;(. Correct answer was \'', def, '\'. \nLet\'s try again, ', name, '!'];
+    return message.join('');
   }
   return 'Correct!';
-};
-
-const wrongAnswer = (usr, def, name) => {
-  console.log('\'' + usr + '\' is wrong answer ;(. Correct answer was \'' + def + '\'.');
-  console.log('Let\'s try again, ' + name + '!');
 };
 
 const GCD = (a, b) => {
@@ -79,6 +81,6 @@ const isPrime = (n) => {
 };
 
 export {
-  isEven, randomNumber, randomExpression, wrongAnswer, getAnswer, GCD, check, getName,
-  randomInteger, arithmeticProgression, isPrime,
+  isEven, randomNumber, randomExpression, getAnswer, GCD, check, getName,
+  randomInteger, arithmeticProgression, isPrime, Congratulations,
 };
