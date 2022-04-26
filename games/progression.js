@@ -1,5 +1,5 @@
 import {
-  getAnswer, getName, check, randomInteger, arithmeticProgression,
+  getAnswer, getName, check, randomInteger, arithmeticProgression, Congratulations,
 } from '../src/index.js';
 
 const progressionGame = () => {
@@ -17,7 +17,7 @@ const progressionGame = () => {
       return;
     }
   }
-  console.log('Congratulations, ' + name + '!');
+  console.log(Congratulations(name));
 };
 
 export default progressionGame;

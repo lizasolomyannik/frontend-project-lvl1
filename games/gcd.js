@@ -1,5 +1,5 @@
 import {
-  randomNumber, getAnswer, GCD, check, getName,
+  randomNumber, getAnswer, GCD, check, getName, Congratulations,
 } from '../src/index.js';
 
 const gcdGame = () => {
@@ -16,7 +16,7 @@ const gcdGame = () => {
       return;
     }
   }
-  console.log('Congratulations, ' + name + '!');
+  console.log(Congratulations(name));
 };
 
 export default gcdGame;

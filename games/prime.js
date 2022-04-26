@@ -1,5 +1,5 @@
 import {
-  getAnswer, getName, check, randomNumber, isPrime,
+  getAnswer, getName, check, randomNumber, isPrime, Congratulations,
 } from '../src/index.js';
 
 const primeGame = () => {
@@ -15,7 +15,7 @@ const primeGame = () => {
       return;
     }
   }
-  console.log('Congratulations, ' + name + '!');
+  console.log(Congratulations(name));
 };
 
 export default primeGame;

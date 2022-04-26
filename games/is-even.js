@@ -1,5 +1,5 @@
 import {
-  getAnswer, getName, isEven, check,
+  getAnswer, getName, isEven, check, Congratulations,
 } from '../src/index.js';
 
 const evenGame = () => {
@@ -20,7 +20,7 @@ const evenGame = () => {
       return;
     }
   }
-  console.log('Congratulations, ' + name + '!');
+  console.log(Congratulations(name));
 };
 
 export default evenGame;
