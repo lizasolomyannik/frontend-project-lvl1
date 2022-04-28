@@ -1,22 +1,28 @@
-import {
-  randomNumber, getAnswer, GCD, check, getName, Congratulations,
-} from '../index.js';
+import run from '../index.js';
+
+const randomInteger = (min, max) => {
+  Math.ceil(min);
+  Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+const GCD = (a, b) => {
+  if (b > a) return GCD(b, a);
+  if (!b) return a;
+  if (a === b) return a;
+  return GCD(b, a % b);
+};
+
+const getRound = () => {
+  const [a, b] = [randomInteger(1, 1000), randomInteger(1, 1000)];
+  const question = `${a} ${b}`;
+  const answer = GCD(a, b);
+  return [question, answer.toString()];
+};
 
 const gcdGame = () => {
-  const name = String(getName());
-  console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 0; i < 3; i += 1) {
-    const a = randomNumber();
-    const b = randomNumber();
-    console.log('Question:', a, b);
-    const def = GCD(a, b);
-    const usr = Number(getAnswer());
-    console.log(check(usr, def, name));
-    if (check(usr, def, name) !== 'Correct!') {
-      return;
-    }
-  }
-  console.log(Congratulations(name));
+  const gameDescription = 'Find the greatest common divisor of given numbers.';
+  run(gameDescription, getRound);
 };
 
 export default gcdGame;
