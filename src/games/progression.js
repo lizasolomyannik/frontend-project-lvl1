@@ -23,7 +23,7 @@ const getRound = () => {
   const answer = progression[missingIndex];
   progression[missingIndex] = '..';
   const question = `${progression.join(' ')}`;
-  return [question, answer.toString()];
+  return [question, answer];
 };
 
 const progressionGame = () => {

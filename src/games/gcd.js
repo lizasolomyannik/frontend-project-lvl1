@@ -17,7 +17,7 @@ const getRound = () => {
   const [a, b] = [randomInteger(1, 1000), randomInteger(1, 1000)];
   const question = `${a} ${b}`;
   const answer = GCD(a, b);
-  return [question, answer.toString()];
+  return [question, answer];
 };
 
 const gcdGame = () => {

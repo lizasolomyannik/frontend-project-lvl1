@@ -35,7 +35,7 @@ const getRound = () => {
     default:
       break;
   }
-  return [question, answer.toString()];
+  return [question, answer];
 };
 
 const calcGame = () => {

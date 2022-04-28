@@ -9,7 +9,7 @@ const run = (gameDescription, getRound) => {
     const [question, def] = getRound();
     console.log(`Question: ${question}`);
     const usr = readlineSync.question('Your answer: ');
-    if (usr !== def) {
+    if (Number(usr) !== def) {
       console.log(`'${usr}' is wrong answer ;(. Correct answer was '${def}'. \nLet's try again, ${name}!`);
       return;
     }

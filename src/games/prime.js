@@ -21,7 +21,7 @@ const isPrime = (n) => {
 const getRound = () => {
   const question = randomInteger(1, 1000);
   const answer = isPrime(question);
-  return [question, answer.toString()];
+  return [question, answer];
 };
 
 const primeGame = () => {
