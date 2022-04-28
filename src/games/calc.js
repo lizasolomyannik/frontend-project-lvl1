@@ -1,41 +1,47 @@
-import {
-  randomNumber, randomExpression, check, getAnswer, getName, Congratulations,
-} from '../index.js';
+import { randomNumber } from '../index-old.js';
+import run from '../index.js';
 
-const calc = () => {
-  const name = String(getName());
-  console.log('What is the result of the expression?');
-  for (let i = 0; i < 3; i += 1) {
-    const firstNumber = randomNumber();
-    const sign = randomExpression();
-    const secondNumber = randomNumber();
-    const expression = [firstNumber, sign, secondNumber];
-    console.log('Question:', firstNumber, sign, secondNumber);
-    let def;
-    const operation = expression[1];
-    switch (operation) {
-      case '+':
-        def = expression[0] + expression[2];
-        break;
-      case '-':
-        def = expression[0] - expression[2];
-        break;
-      case '*':
-        def = expression[0] * expression[2];
-        break;
-      case '/':
-        def = expression[0] / expression[2];
-        break;
-      default:
-        break;
-    }
-    const usr = Number(getAnswer());
-    console.log(check(usr, def, name));
-    if (check(usr, def, name) !== 'Correct!') {
-      return;
-    }
-  }
-  console.log(Congratulations(name));
+const randomInteger = (min, max) => {
+  Math.ceil(min);
+  Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-export default calc;
+const randomExpression = () => {
+  const chars = ['-', '+', '*', '/'];
+  const len = chars.length;
+  const randomIndex = Math.floor(Math.random() * (len - 1));
+  return chars[randomIndex];
+};
+
+const getRound = () => {
+  const [firstNumber, sign, secondNumber] = [
+    randomInteger(1, 1000), randomExpression(), randomNumber(1, 1000),
+  ];
+  const question = `${firstNumber} ${sign} ${secondNumber}`;
+  let answer;
+  switch (sign) {
+    case '+':
+      answer = firstNumber + secondNumber;
+      break;
+    case '-':
+      answer = firstNumber - secondNumber;
+      break;
+    case '*':
+      answer = firstNumber * secondNumber;
+      break;
+    case '/':
+      answer = firstNumber / secondNumber;
+      break;
+    default:
+      break;
+  }
+  return [question, answer.toString()];
+};
+
+const calcGame = () => {
+  const gameDescription = 'What is the result of the expression?';
+  run(gameDescription, getRound);
+};
+
+export default calcGame;
