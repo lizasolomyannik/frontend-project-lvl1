@@ -1,23 +1,34 @@
-import {
-  getAnswer, getName, check, randomInteger, arithmeticProgression, Congratulations,
-} from '../index.js';
+import run from '../index.js';
+
+const randomInteger = (min, max) => {
+  Math.ceil(min);
+  Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+const arithmeticProgression = () => {
+  const firstElement = randomInteger(1, 1000);
+  const step = randomInteger(1, 100);
+  const progression = [firstElement];
+  for (let j = 1; j < 10; j += 1) {
+    const element = progression[j - 1] + step;
+    progression.push(element);
+  }
+  return progression;
+};
+
+const getRound = () => {
+  const progression = arithmeticProgression(10);
+  const missingIndex = randomInteger(0, 10);
+  const answer = progression[missingIndex];
+  progression[missingIndex] = '..';
+  const question = `${progression.join(' ')}`;
+  return [question, answer.toString()];
+};
 
 const progressionGame = () => {
-  const name = String(getName());
-  console.log('What number is missing in the progression?');
-  for (let i = 0; i < 3; i += 1) {
-    const progression = arithmeticProgression(10);
-    const missingIndex = randomInteger(10);
-    const def = progression[missingIndex];
-    progression[missingIndex] = '..';
-    console.log('Question:', progression.join(' '));
-    const usr = Number(getAnswer());
-    console.log(check(usr, def, name));
-    if (check(usr, def, name) !== 'Correct!') {
-      return;
-    }
-  }
-  console.log(Congratulations(name));
+  const gameDescription = 'What number is missing in the progression?';
+  run(gameDescription, getRound);
 };
 
 export default progressionGame;
