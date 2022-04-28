@@ -8,19 +8,23 @@ const randomInteger = (min, max) => {
 
 const isPrime = (n) => {
   if (n < 2) {
-    return 'no';
+    return false;
   }
   for (let i = 2; i < n; i += 1) {
     if (n % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const getRound = () => {
   const question = randomInteger(1, 1000);
-  const answer = isPrime(question);
+  const result = isPrime(question);
+  let answer = 'no';
+  if (result) {
+    answer = 'yes';
+  }
   return [question, answer];
 };
 
