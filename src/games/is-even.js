@@ -1,6 +1,6 @@
 import {
   getAnswer, getName, isEven, check, Congratulations,
-} from '../src/index.js';
+} from '../index.js';
 
 const evenGame = () => {
   const name = String(getName());

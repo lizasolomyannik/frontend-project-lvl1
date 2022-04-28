@@ -1,6 +1,6 @@
 import {
   randomNumber, randomExpression, check, getAnswer, getName, Congratulations,
-} from '../src/index.js';
+} from '../index.js';
 
 const calc = () => {
   const name = String(getName());

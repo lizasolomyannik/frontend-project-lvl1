@@ -1,6 +1,6 @@
 import {
   getAnswer, getName, check, randomInteger, arithmeticProgression, Congratulations,
-} from '../src/index.js';
+} from '../index.js';
 
 const progressionGame = () => {
   const name = String(getName());

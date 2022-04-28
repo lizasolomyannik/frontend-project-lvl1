@@ -1,6 +1,6 @@
 import {
   getAnswer, getName, check, randomNumber, isPrime, Congratulations,
-} from '../src/index.js';
+} from '../index.js';
 
 const primeGame = () => {
   const name = String(getName());

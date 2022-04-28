@@ -1,6 +1,6 @@
 import {
   randomNumber, getAnswer, GCD, check, getName, Congratulations,
-} from '../src/index.js';
+} from '../index.js';
 
 const gcdGame = () => {
   const name = String(getName());
