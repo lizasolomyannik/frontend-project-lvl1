@@ -1,4 +1,3 @@
-import { randomNumber } from '../index-old.js';
 import run from '../index.js';
 
 const randomInteger = (min, max) => {
@@ -16,7 +15,7 @@ const randomExpression = () => {
 
 const getRound = () => {
   const [firstNumber, sign, secondNumber] = [
-    randomInteger(1, 1000), randomExpression(), randomNumber(1, 1000),
+    randomInteger(1, 1000), randomExpression(), randomInteger(1, 1000),
   ];
   const question = `${firstNumber} ${sign} ${secondNumber}`;
   let answer;
