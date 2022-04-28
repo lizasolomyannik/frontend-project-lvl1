@@ -10,8 +10,7 @@ First Hexlet frontend project
 ## Installation
 
 ```bash
-  npm install frontend-project-lvl1
-  cd frontend-project-lvl1
+  make install
 ```
 
 ## Games
