@@ -8,8 +8,7 @@ const isEven = (n) => {
 };
 
 const Congratulations = (name) => {
-  const message = ['Congratulations, ', name, '!'];
-  return message.join('');
+  console.log(`Congratulations, ${name}!`);
 };
 
 const randomNumber = () => {
@@ -32,8 +31,7 @@ const randomExpression = () => {
 const getName = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
-  const message = ['Hello, ', name, '!'];
-  console.log(message.join(''));
+  console.log(`Hello, ${name}!`);
   return name;
 };
 
@@ -44,8 +42,7 @@ const getAnswer = () => {
 
 const check = (usr, def, name) => {
   if (usr !== def) {
-    const message = ['\'', usr, '\' is wrong answer ;(. Correct answer was \'', def, '\'. \nLet\'s try again, ', name, '!'];
-    return message.join('');
+    return (`'${usr}' is wrong answer ;(. Correct answer was '${def}'. \nLet's try again, ${name}!`);
   }
   return 'Correct!';
 };
