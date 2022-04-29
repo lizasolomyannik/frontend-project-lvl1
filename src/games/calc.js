@@ -3,16 +3,12 @@ import { randomInteger } from '../utils.js';
 
 const randomExpression = () => {
   const chars = ['-', '+', '*', '/'];
-  const len = chars.length;
-  const randomIndex = randomInteger(0, len - 1);
+  const lastIndex = chars.length - 1;
+  const randomIndex = randomInteger(0, lastIndex);
   return chars[randomIndex];
 };
 
-const getRound = () => {
-  const [firstNumber, sign, secondNumber] = [
-    randomInteger(1, 1000), randomExpression(), randomInteger(1, 1000),
-  ];
-  const question = `${firstNumber} ${sign} ${secondNumber}`;
+const calculation = (firstNumber, sign, secondNumber) => {
   let answer;
   switch (sign) {
     case '+':
@@ -30,6 +26,15 @@ const getRound = () => {
     default:
       break;
   }
+  return answer;
+};
+
+const getRound = () => {
+  const [firstNumber, sign, secondNumber] = [
+    randomInteger(1, 1000), randomExpression(), randomInteger(1, 1000),
+  ];
+  const question = `${firstNumber} ${sign} ${secondNumber}`;
+  const answer = calculation(firstNumber, sign, secondNumber);
   return [question, answer.toString()];
 };
 
