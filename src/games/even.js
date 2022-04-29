@@ -1,16 +1,11 @@
 import run from '../index.js';
+import { randomInteger } from '../utils.js';
 
 const isEven = (n) => {
   if ((n % 2) === 0) {
     return true;
   }
   return false;
-};
-
-const randomInteger = (min, max) => {
-  Math.ceil(min);
-  Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
 const getRound = () => {
