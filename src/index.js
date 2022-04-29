@@ -7,11 +7,11 @@ const run = (gameDescription, getRound) => {
   console.log(gameDescription);
   const roundsCount = 3;
   for (let i = 0; i < roundsCount; i += 1) {
-    const [question, def] = getRound();
+    const [question, correctAnswer] = getRound();
     console.log(`Question: ${question}`);
-    const usr = readlineSync.question('Your answer: ');
-    if (usr !== def) {
-      console.log(`'${usr}' is wrong answer ;(. Correct answer was '${def}'. \nLet's try again, ${name}!`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`);
       return;
     }
     console.log('Correct!');
