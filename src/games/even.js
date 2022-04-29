@@ -10,10 +10,7 @@ const isEven = (n) => {
 
 const getRound = () => {
   const question = randomInteger(0, 1000);
-  let answer = 'no';
-  if (isEven(question)) {
-    answer = 'yes';
-  }
+  const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
 

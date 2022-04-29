@@ -15,11 +15,7 @@ const isPrime = (n) => {
 
 const getRound = () => {
   const question = randomInteger(1, 1000);
-  const result = isPrime(question);
-  let answer = 'no';
-  if (result) {
-    answer = 'yes';
-  }
+  const answer = isPrime(question) ? 'yes' : 'no'
   return [question, answer];
 };
 
