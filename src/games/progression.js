@@ -15,11 +15,10 @@ const arithmeticProgression = () => {
 const getRound = () => {
   const progression = arithmeticProgression(10);
   const missingIndex = randomInteger(0, 10);
-  let answer = progression[missingIndex];
+  const answer = progression[missingIndex];
   progression[missingIndex] = '..';
   const question = `${progression.join(' ')}`;
-  answer = answer.toString();
-  return [question, answer];
+  return [question, answer.toString()];
 };
 
 const progressionGame = () => {
