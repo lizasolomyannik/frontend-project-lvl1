@@ -4,7 +4,7 @@ import { randomInteger } from '../utils.js';
 const randomExpression = () => {
   const chars = ['-', '+', '*', '/'];
   const len = chars.length;
-  const randomIndex = Math.floor(Math.random() * (len - 1));
+  const randomIndex = randomInteger(0, len - 1);
   return chars[randomIndex];
 };
 
