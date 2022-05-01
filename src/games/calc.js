@@ -2,7 +2,7 @@ import run from '../index.js';
 import { randomInteger } from '../utils.js';
 
 const randomExpression = () => {
-  const chars = ['-', '+', '*', '/'];
+  const chars = ['-', '+', '*'];
   const lastIndex = chars.length - 1;
   const randomIndex = randomInteger(0, lastIndex);
   return chars[randomIndex];
@@ -19,9 +19,6 @@ const calculation = (firstNumber, sign, secondNumber) => {
       break;
     case '*':
       answer = firstNumber * secondNumber;
-      break;
-    case '/':
-      answer = firstNumber / secondNumber;
       break;
     default:
       break;
