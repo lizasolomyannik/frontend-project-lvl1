@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import run from '../index.js';
 import { randomInteger } from '../utils.js';
 
