@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 const randomInteger = (min, max) => {
   Math.ceil(min);
   Math.floor(max);
